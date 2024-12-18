@@ -107,6 +107,49 @@ main {
     visibility: visible;
 }
 
+
+.credits {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credits a {
+    display: inline-block;
+}
+
+.credits img {
+    width: 20%;
+    /* Increase size */
+    max-width: 10rem;
+    /* Larger and clearer logo */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.credits img:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+.credits span {
+    text-decoration: none;
+    color: #FF00FF;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rsvp-form.active+.credits,
+#rsvp-button+.credits {
+    margin-top: 1rem;
+}
+
+
 @media screen and (max-width: 768px) {
     body {
         background-size: auto 100%;
@@ -156,6 +199,15 @@ main {
     .logo {
         margin-top: 8rem;
     }
+
+    .credits img {
+        width: 40%;
+        max-width: 2.5rem;
+    }
+
+    .credits a {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -171,6 +223,15 @@ main {
     }
 
     .logo {
-        margin-top: 8rem;
+        margin-top: 7rem;
+    }
+
+    .credits img {
+        width: 60%;
+        max-width: 4rem;
+    }
+
+    .credits a {
+        font-size: 0.7rem;
     }
 }
