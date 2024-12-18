@@ -152,6 +152,10 @@ main {
         margin-bottom: 1.5rem;
 
     }
+
+    .logo {
+        margin-top: 8rem;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -160,5 +164,13 @@ main {
         background-size: cover;
         background-position: center center;
         background-attachment: scroll;
+    }
+
+    .container {
+        margin-top: 2.5rem;
+    }
+
+    .logo {
+        margin-top: 8rem;
     }
 }
