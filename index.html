@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perion North America Offsite</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const baseElement = document.createElement('base');
+            baseElement.href = isLocal ? '/' : '/RSVP/';
+            document.head.appendChild(baseElement);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <main>
+            <img src="images/logo.png" alt="Perion Logo" class="logo">
+            <h2 class="kickoff">Join us for the ultimate kick-off in the Big Easy!</h2>
+            <p class="description">
+                We’re trading conference rooms and Zoom screens for jazz-filled streets and bringing the North American team together in the heart of New Orleans!
+                For many of us, this will be the first time meeting face-to-face, and we’re making it an event to remember.
+            </p>
+            <p class="description">    
+                Get ready for an experience that blends business with the vibrant energy of the city. Expect dynamic presentations,
+                fresh ideas, and a few surprises that will keep you on your toes. It’s more than just an offsite—it’s a chance to connect,
+                collaborate, and celebrate in an unforgettable setting. You won’t want to miss it!
+            </p>
+            <p class="description">
+                Come for the strategies and beignets, stay for the fun—and celebrate what’s next for Perion in 2025.
+            </p>
+            <p class="mandatory">
+                <span class="mandatory-dark">(PLEASE NOTE </span>
+                <span class="mandatory-light">MANDATORY REGISTRATION</span>
+                <span class="mandatory-dark"> REGARDLESS OF ATTENDANCE)</span>
+            </p>
+            
+            <!-- RSVP Button -->
+            <a href="#" class="rsvp-button" id="rsvp-button">
+                <img src="images/rsvp.png" alt="RSVP">
+            </a>
+
+            <!-- Hidden Form Container -->
+            <div id="rsvp-form" class="rsvp-form">
+                <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/84a4700167db754b8844540addda4135?embedded=1"></div>
+
+                <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+                <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+
+                <!-- Get notified when the form is submitted, add your own code below: -->
+                <script>
+                    const formkeepEmbed = document.querySelector('#formkeep-embed');
+
+                    formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+                        console.log('Submitting form...');
+                    });
+
+                    formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+                        console.log('Submitted form...');
+                    });
+                </script>
+            </div>
+        </main>      
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rsvpButton = document.getElementById('rsvp-button');
+            const rsvpForm = document.getElementById('rsvp-form');
+        
+            rsvpButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default link behavior
+        
+                // Toggle the "active" class on the form
+                rsvpForm.classList.toggle('active');
+        
+                // If the form becomes visible, scroll it into view
+                if (rsvpForm.classList.contains('active')) {
+                    rsvpForm.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
