@@ -210,6 +210,134 @@ main {
     }
 }
 
+/* Location Section */
+.location-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; /* Wider than RSVP section */
+    max-width: 80rem; /* Ensures it stretches properly */
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.location-content {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: left; /* Aligns text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-heading {
+    color: #FF00FF; /* Updated header color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.location-name {
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.location-address {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.location-note {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.location-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    color: #11244b;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.location-button:hover {
+    background: #ff8c42;
+    color: white;
+}
+
+/* Slider Styles */
+.location-slider {
+    flex: 1;
+    position: relative;
+    max-width: 45rem; /* Allows a larger width */
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
+
+.slide-count {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 550px) {
     body {
         background: url('../images/916_bg.webp') no-repeat center center;
@@ -233,5 +361,20 @@ main {
 
     .credits a {
         font-size: 0.7rem;
+    }
+
+    .location-section {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+        width: 95%;
+    }
+
+    .location-slider {
+        max-width: 100%;
+    }
+
+    .prev-slide, .next-slide {
+        font-size: 1.5rem;
     }
 }

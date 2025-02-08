@@ -25,7 +25,7 @@
                 We’re trading conference rooms and Zoom screens for jazz-filled streets and bringing the North American team together in the heart of New Orleans!
                 For many of us, this will be the first time meeting face-to-face, and we’re making it an event to remember.
             </p>
-            <p class="description">    
+            <p class="description">
                 Get ready for an experience that blends business with the vibrant energy of the city. Expect dynamic presentations,
                 fresh ideas, and a few surprises that will keep you on your toes. It’s more than just an offsite—it’s a chance to connect,
                 collaborate, and celebrate in an unforgettable setting. You won’t want to miss it!
@@ -38,7 +38,7 @@
                 <span class="mandatory-light">MANDATORY REGISTRATION</span>
                 <span class="mandatory-dark"> REGARDLESS OF ATTENDANCE)</span>
             </p>
-            
+
             <!-- RSVP Button -->
             <a href="#" class="rsvp-button" id="rsvp-button">
                 <img src="images/rsvp.png" alt="RSVP">
@@ -64,6 +64,34 @@
                     });
                 </script>
             </div>
+            <!-- Location Section -->
+            <section class="location-section">
+                <div class="location-content">
+                    <h3 class="location-heading">WHERE</h3>
+                    <h2 class="location-name">Hilton New Orleans Riverside</h2>
+                    <p class="location-address">
+                        Two Poydras St, <br>
+                        New Orleans, LA 70130
+                    </p>
+                    <p class="location-note">** Hotel accommodations will be booked for you.</p>
+
+                    <a href="https://www.hilton.com/en/hotels/msynhhh-hilton-new-orleans-riverside/"
+                       target="_blank" class="location-button">LOCATION</a>
+                </div>
+
+                <div class="location-slider">
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <img src="images/logo.png" alt="Hotel Image 1" class="slide active">
+                            <img src="images/rsvp.png" alt="Hotel Image 2" class="slide">
+                        </div>
+                        <button class="prev-slide">&#10094;</button>
+                        <button class="next-slide">&#10095;</button>
+                    </div>
+                    <p class="slide-count">1 of 2</p>
+                </div>
+            </section>
+
 
             <!-- Credits Section -->
             <div class="credits">
@@ -72,7 +100,7 @@
                     <img src="images/good_logo.png" alt="Good All Day Collective Logo">
                 </a>
             </div>
-        </main>      
+        </main>
     </div>
 
     <!-- JavaScript -->
@@ -80,18 +108,46 @@
         document.addEventListener("DOMContentLoaded", function () {
             const rsvpButton = document.getElementById('rsvp-button');
             const rsvpForm = document.getElementById('rsvp-form');
-        
+
             rsvpButton.addEventListener('click', function (event) {
                 event.preventDefault(); // Prevent default link behavior
-        
+
                 // Toggle the "active" class on the form
                 rsvpForm.classList.toggle('active');
-        
+
                 // If the form becomes visible, scroll it into view
                 if (rsvpForm.classList.contains('active')) {
                     rsvpForm.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-slide');
+            const nextBtn = document.querySelector('.next-slide');
+            const slideCount = document.querySelector('.slide-count');
+            let currentIndex = 0;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentIndex);
+                });
+                slideCount.textContent = `${currentIndex + 1} of ${slides.length}`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                updateSlides();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                updateSlides();
+            });
+
+            updateSlides();
         });
     </script>
 </body>
