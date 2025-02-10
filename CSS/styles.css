@@ -630,9 +630,6 @@ body {
 
 /* Additional Breakpoint for Extra Small Devices */
 @media screen and (max-width: 450px) {
-    body {
-        background-size: contain;
-    }
 
     /* Further Text Size Reductions */
     .main-container h2 {
