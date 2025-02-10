@@ -34,7 +34,7 @@ html, body {
 
 body {
     background-color: black;
-    background: black url('../images/169_bg.png') no-repeat center center;
+    background: black url('../images/169_bg.webp') no-repeat center center;
     background-size: contain;
     background-position: center center;
     background-attachment: fixed;
@@ -471,7 +471,7 @@ body {
 @media screen and (max-width: 768px) {
     /* Base Layout Adjustments */
     body {
-        background: black url('../images/916_bg.png') no-repeat center center;
+        background: black url('../images/916_bg.webp') no-repeat center center;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
