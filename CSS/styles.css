@@ -33,8 +33,9 @@ html, body {
 }
 
 body {
-    background: url('../images/169_bg.png') no-repeat center center;
-    background-size: cover;
+    background-color: black;
+    background: black url('../images/169_bg.png') no-repeat center center;
+    background-size: contain;
     background-position: center center;
     background-attachment: fixed;
     color: var(--color-text);
@@ -470,29 +471,12 @@ body {
 @media screen and (max-width: 768px) {
     /* Base Layout Adjustments */
     body {
-        background: url(../images/916_bg.png) no-repeat center center;
-        background-size: cover !important;
-        background-position: center center !important;
-        transition: none !important;
-        background-attachment: fixed !important;
-    }
-    body {
-        background-size: auto 100%;
-        background-attachment: scroll;
-        height: auto;
-        padding: 1rem;
-    }
-
-    @supports (-webkit-touch-callout: none) {
-        body {
-            background-attachment: scroll;
-            /* Use standard viewport units with a fallback */
-            min-height: 100vh;
-            /* Add padding to prevent content from being hidden behind mobile browser UI */
-            padding-bottom: env(safe-area-inset-bottom);
-            /* Ensure content is visible on notched devices */
-            padding-top: env(safe-area-inset-top);
-        }
+        background: black url('../images/916_bg.png') no-repeat center center;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        text-align: center;
+        padding:1rem;
     }
 
     /* Container Adjustments */
@@ -505,31 +489,42 @@ body {
         margin: 2rem auto;
         padding: 1rem;
     }
-
+    .location-container h2{
+        text-align: left;
+        padding: 0 1rem;
+    }
     /* Text Sizing and Alignment */
     .main-container h2 {
         margin-top: -2rem;
-        font-size: 2rem;
-        text-align: center;
-        padding: 0 1rem;
+        font-size: 1.5rem;
+        text-align: justify-all;
+        padding: 0 0.8rem;
+        margin-bottom: 0.2rem;
     }
 
-    .description,
-    .booking-text,
-    .info-text,
-    .agenda-text,
-    .location-address,
-    .location-note {
+    .description{
         font-size: 1rem;
         text-align: center;
         padding: 0 1rem;
         margin-bottom: 1rem;
     }
 
-    /* Section Layout Adjustments */
+    .booking-text,
+    .info-text,
+    .agenda-text,
+    .location-address,
+    .location-note{
+        font-size: 1rem;
+        text-align: left;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+        /* Section Layout Adjustments */
     .location-section,
     .booking-section,
-    .additional-info-section {
+    .additional-info-section
+    {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -544,6 +539,14 @@ body {
         width: 100%;
         max-width: 100%;
         text-align: center;
+    }
+
+    .agenda-section,
+    .agenda-content {
+        padding: 0.5em;
+    }
+    .agenda-text {
+        text-align: left;
     }
 
     /* Remove Side Padding */
@@ -626,14 +629,11 @@ body {
 }
 
 /* Additional Breakpoint for Extra Small Devices */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     body {
-        background: url(../images/916_bg.png) no-repeat center center;
-        background-size: cover !important;
-        background-position: center center !important;
-        transition: none !important;
-        background-attachment: fixed !important;
+        background-size: contain;
     }
+
     /* Further Text Size Reductions */
     .main-container h2 {
         font-size: 1.35rem;
@@ -697,7 +697,7 @@ body {
 }
 
 /* Landscape Mode Fixes */
-@media screen and (max-height: 480px) and (orientation: landscape) {
+@media screen and (max-height: 450px) and (orientation: landscape) {
     .main-container {
         margin-top: 1rem;
     }
