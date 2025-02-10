@@ -16,139 +16,227 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <!-- Main Content -->
-        <main>
-            <img src="images/logo.png" alt="Perion Logo" class="logo">
-            <h2 class="kickoff">Join us for the ultimate kick-off in the Big Easy!</h2>
-            <p class="description">
-                We’re trading conference rooms and Zoom screens for jazz-filled streets and bringing the North American team together in the heart of New Orleans!
-                For many of us, this will be the first time meeting face-to-face, and we’re making it an event to remember.
-            </p>
-            <p class="description">
-                Get ready for an experience that blends business with the vibrant energy of the city. Expect dynamic presentations,
-                fresh ideas, and a few surprises that will keep you on your toes. It’s more than just an offsite—it’s a chance to connect,
-                collaborate, and celebrate in an unforgettable setting. You won’t want to miss it!
-            </p>
-            <p class="description">
-                Come for the strategies and beignets, stay for the fun—and celebrate what’s next for Perion in 2025.
-            </p>
-            <p class="mandatory">
-                <span class="mandatory-dark">(PLEASE NOTE </span>
-                <span class="mandatory-light">MANDATORY REGISTRATION</span>
-                <span class="mandatory-dark"> REGARDLESS OF ATTENDANCE)</span>
-            </p>
+<!-- Main Content Container -->
+<div class="main-container">
+    <main>
+        <img src="images/logo.png" alt="Perion Logo" class="logo">
+        <h2 class="kickoff">JOIN US FOR THE ULTIMATE KICK-OFF IN THE BIG EASY!</h2>
+        <p class="description">
+            We're trading conference rooms and Zoom screens for jazz-filled streets and bringing the North American team together in the heart of New Orleans!
+            For many of us, this will be the first time meeting face-to-face, and we're making it an event to remember.
+        </p>
+        <p class="description">
+            Get ready for an experience that blends business with the vibrant energy of the city. Expect dynamic presentations,
+            fresh ideas, and a few surprises that will keep you on your toes. It's more than just an offsite—it's a chance to connect,
+            collaborate, and celebrate in an unforgettable setting. You won't want to miss it!
+        </p>
+        <p class="description">
+            Come for the strategies and beignets, stay for the fun—and celebrate what's next for Perion in 2025.
+        </p>
+        <p class="mandatory">
+            <span class="mandatory-dark">(PLEASE NOTE </span>
+            <span class="mandatory-light">MANDATORY REGISTRATION</span>
+            <span class="mandatory-dark"> REGARDLESS OF ATTENDANCE)</span>
+        </p>
 
-            <!-- RSVP Button -->
+        <!-- RSVP Button -->
+        <div class="rsvp-button-container">
             <a href="#" class="rsvp-button" id="rsvp-button">
-                <img src="images/rsvp.png" alt="RSVP">
+                <img src="images/rsvp.webp" alt="RSVP">
+            </a>
+        </div>
+
+        <!-- Hidden Form Container -->
+        <div id="rsvp-form" class="rsvp-form">
+            <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/84a4700167db754b8844540addda4135?embedded=1"></div>
+
+            <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+            <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+
+            <script>
+                const formkeepEmbed = document.querySelector('#formkeep-embed');
+                formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+                    console.log('Submitting form...');
+                });
+                formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+                    console.log('Submitted form...');
+                });
+            </script>
+        </div>
+    </main>
+</div>
+
+<!-- Decorative Line -->
+<div class="decorative-line">
+    <img src="images/pink_line.png" alt="Decorative line">
+</div>
+
+<!-- Location Container -->
+<div class="location-container">
+    <section class="location-section">
+        <div class="location-content">
+            <h3 class="location-heading">WHERE</h3>
+            <h2 class="location-name">Hilton New Orleans Riverside</h2>
+            <p class="location-address">
+                Two Poydras St, <br>
+                New Orleans, LA 70130
+            </p>
+            <p class="location-note">Hotel accommodations will be booked for you.</p>
+            <a href="https://www.hilton.com/en/hotels/msynhhh-hilton-new-orleans-riverside/"
+               target="_blank" class="location-link">
+                <img src="images/location.png" alt="Location" class="location-image">
             </a>
 
-            <!-- Hidden Form Container -->
-            <div id="rsvp-form" class="rsvp-form">
-                <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/84a4700167db754b8844540addda4135?embedded=1"></div>
 
-                <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
-                <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+        </div>
 
-                <!-- Get notified when the form is submitted, add your own code below: -->
-                <script>
-                    const formkeepEmbed = document.querySelector('#formkeep-embed');
-
-                    formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
-                        console.log('Submitting form...');
-                    });
-
-                    formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
-                        console.log('Submitted form...');
-                    });
-                </script>
-            </div>
-            <!-- Location Section -->
-            <section class="location-section">
-                <div class="location-content">
-                    <h3 class="location-heading">WHERE</h3>
-                    <h2 class="location-name">Hilton New Orleans Riverside</h2>
-                    <p class="location-address">
-                        Two Poydras St, <br>
-                        New Orleans, LA 70130
-                    </p>
-                    <p class="location-note">** Hotel accommodations will be booked for you.</p>
-
-                    <a href="https://www.hilton.com/en/hotels/msynhhh-hilton-new-orleans-riverside/"
-                       target="_blank" class="location-button">LOCATION</a>
+        <div class="location-slider">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img src="images/hotel_first.png" alt="Hotel Image 1" class="slide active">
+                    <img src="images/hotel_front.png" alt="Hotel Image 1" class="slide">
+                    <img src="images/hotel_room.png" alt="Hotel Image 2" class="slide">
+                    <img src="images/hotel_bar.png" alt="Hotel Image 3" class="slide">
                 </div>
-
-                <div class="location-slider">
-                    <div class="slider-wrapper">
-                        <div class="slider">
-                            <img src="images/logo.png" alt="Hotel Image 1" class="slide active">
-                            <img src="images/rsvp.png" alt="Hotel Image 2" class="slide">
-                        </div>
-                        <button class="prev-slide">&#10094;</button>
-                        <button class="next-slide">&#10095;</button>
-                    </div>
-                    <p class="slide-count">1 of 2</p>
-                </div>
-            </section>
-
-
-            <!-- Credits Section -->
-            <div class="credits">
-                <span>Designed by Good All Day Collective</span>
-                <a href="https://www.goodalldayco.com" target="_blank">
-                    <img src="images/good_logo.png" alt="Good All Day Collective Logo">
-                </a>
+                <button class="prev-slide">&#10094;</button>
+                <button class="next-slide">&#10095;</button>
             </div>
-        </main>
-    </div>
+            <p class="slide-count">1 of 2</p>
+        </div>
+    </section>
+</div>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const rsvpButton = document.getElementById('rsvp-button');
-            const rsvpForm = document.getElementById('rsvp-form');
+<div class="decorative-line">
+    <img src="images/gold_line.png" alt="Decorative line">
+</div>
 
-            rsvpButton.addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent default link behavior
+<!-- Booking Container -->
+<div class="booking-container">
+    <section class="booking-section">
+        <div class="booking-content">
+            <h3 class="booking-heading">BOOK YOUR TRAVEL</h3>
+            <p class="booking-text">
+                All employees must book their travel using our Concur booking system.
+                If you don't know how to log in, please contact <a href="mailto:concur@perion.com">concur@perion.com</a>.<br>
+                Those who do not have access to Concur travel, please book and then submit the expense through Concur.
+            </p>
+            <p class="booking-text">
+                Please log in and schedule your departing flight from your preferred airport and set your destination as
+                New Orleans (MSY).
+            </p>
+            <p class="booking-text">
+                Content will begin early afternoon on Tuesday, so please ensure you arrive with enough time to check in and get settled.
+                On Thursday, there will be content until midday.
+            </p>
+            <p class="booking-text">
+                Once you are confirmed, please forward your flight information email to:
+                <a href="mailto:summitquestions@perion.com">summitquestions@perion.com</a>.
+            </p>
+        </div>
 
-                // Toggle the "active" class on the form
-                rsvpForm.classList.toggle('active');
+        <div class="booking-image">
+            <img src="images/nola.png" alt="Travel Booking Placeholder">
+        </div>
+    </section>
+</div>
 
-                // If the form becomes visible, scroll it into view
-                if (rsvpForm.classList.contains('active')) {
-                    rsvpForm.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+<div class="decorative-line">
+    <img src="images/green_line.png" alt="Decorative line">
+</div>
+
+<!-- Additional Info Container -->
+<div class="additional-info-container">
+    <section class="additional-info-section">
+        <!-- FAQs Section -->
+        <div class="info-content">
+            <h3 class="info-heading">FAQs</h3>
+            <p class="info-text">
+                We aim to provide as much information for you as possible, but we know there will be questions.
+                The basics of what, where, and when should be covered here, and all other frequently answered questions
+                can be found in the link below.
+            </p>
+            <p class="info-text">
+                If you have a question that isn't covered, reach out to us at
+                <a href="mailto:summitquestions@perion.com">summitquestions@perion.com</a> and the team will get back to you!
+            </p>
+            <p class="info-text">
+                <a href="#">Check out all the FAQs here!</a>
+            </p>
+        </div>
+        <!-- What to Pack Section -->
+        <div class="info-content">
+            <h3 class="info-heading">WHAT TO PACK</h3>
+            <p class="info-text">Coming soon!</p>
+        </div>
+    </section>
+</div>
+
+<div class="decorative-line">
+    <img src="images/pink_line.png" alt="Decorative line">
+</div>
+
+<!-- Agenda Container -->
+<div class="agenda-container">
+    <section class="agenda-section">
+        <div class="agenda-content">
+            <h3 class="agenda-heading">AGENDA</h3>
+            <p class="agenda-text">
+                We cannot wait to share all of the fun details!
+            </p>
+        </div>
+    </section>
+</div>
+
+
+
+
+<!-- Credits Section -->
+<div class="credits">
+    <span>Designed by Good All Day Collective</span>
+    <a href="https://www.goodalldayco.com" target="_blank">
+        <img src="images/good_logo.png" alt="Good All Day Collective Logo">
+    </a>
+</div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const rsvpButton = document.getElementById('rsvp-button');
+        const rsvpForm = document.getElementById('rsvp-form');
+
+        rsvpButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            rsvpForm.classList.toggle('active');
+            if (rsvpForm.classList.contains('active')) {
+                rsvpForm.scrollIntoView({ behavior: 'smooth' });
+            }
         });
 
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-slide');
+        const nextBtn = document.querySelector('.next-slide');
+        const slideCount = document.querySelector('.slide-count');
+        let currentIndex = 0;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.querySelector('.prev-slide');
-            const nextBtn = document.querySelector('.next-slide');
-            const slideCount = document.querySelector('.slide-count');
-            let currentIndex = 0;
-
-            function updateSlides() {
-                slides.forEach((slide, index) => {
-                    slide.classList.toggle('active', index === currentIndex);
-                });
-                slideCount.textContent = `${currentIndex + 1} of ${slides.length}`;
-            }
-
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-                updateSlides();
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentIndex);
             });
+            slideCount.textContent = `${currentIndex + 1} of ${slides.length}`;
+        }
 
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-                updateSlides();
-            });
-
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
             updateSlides();
         });
-    </script>
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlides();
+        });
+
+        updateSlides();
+    });
+</script>
 </body>
 </html>
