@@ -483,6 +483,18 @@ body {
         padding: 1rem;
     }
 
+    @supports (-webkit-touch-callout: none) {
+        body {
+            background-attachment: scroll;
+            /* Use standard viewport units with a fallback */
+            min-height: 100vh;
+            /* Add padding to prevent content from being hidden behind mobile browser UI */
+            padding-bottom: env(safe-area-inset-bottom);
+            /* Ensure content is visible on notched devices */
+            padding-top: env(safe-area-inset-top);
+        }
+    }
+
     /* Container Adjustments */
     .main-container,
     .location-container,
@@ -624,7 +636,7 @@ body {
     }
     /* Further Text Size Reductions */
     .main-container h2 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     .description,
