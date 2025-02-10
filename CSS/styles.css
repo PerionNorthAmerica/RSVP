@@ -631,6 +631,9 @@ body {
 
 /* Additional Breakpoint for Extra Small Devices */
 @media screen and (max-width: 450px) {
+    .body {
+        background-attachment: scroll;
+    }
     @supports (-webkit-touch-callout: none) {
         body {
             background-attachment: scroll;
