@@ -630,6 +630,11 @@ body {
 
 /* Additional Breakpoint for Extra Small Devices */
 @media screen and (max-width: 450px) {
+    @supports (-webkit-touch-callout: none) {
+        body {
+            background-attachment: fixed;
+        }
+    }
 
     /* Further Text Size Reductions */
     .main-container h2 {
