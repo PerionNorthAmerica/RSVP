@@ -34,8 +34,8 @@ html, body {
 
 body {
     background-color: black;
-    background: black url('../images/169_bg.webp') no-repeat center center;
-    background-size: contain;
+    background: black url('../images/16_9_bg.webp') no-repeat center center;
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     color: var(--color-text);
@@ -43,6 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* Layout Components */
@@ -632,7 +633,7 @@ body {
 @media screen and (max-width: 450px) {
     @supports (-webkit-touch-callout: none) {
         body {
-            background-attachment: fixed;
+            background-attachment: scroll;
         }
     }
 
