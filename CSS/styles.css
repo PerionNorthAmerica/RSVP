@@ -251,7 +251,7 @@ body {
 
 .prev-slide, .next-slide {
     position: absolute;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -512,6 +512,9 @@ body {
         margin-bottom: 0.2rem;
     }
 
+    .prev-slide, .next-slide{
+        top: 43%
+    }
 
     .description{
         font-size: 1rem;
