@@ -475,7 +475,7 @@ body {
         background: black url('../images/916_bg.webp') no-repeat center center;
         background-size: cover;
         background-position: center center;
-        background-attachment: fixed;
+        background-attachment: scroll;
         text-align: center;
         padding:1rem;
     }
@@ -521,7 +521,7 @@ body {
         margin-bottom: 1rem;
     }
 
-        /* Section Layout Adjustments */
+    /* Section Layout Adjustments */
     .location-section,
     .booking-section,
     .additional-info-section
@@ -631,9 +631,11 @@ body {
 
 /* Additional Breakpoint for Extra Small Devices */
 @media screen and (max-width: 450px) {
-    .body {
+    /* Fix typo (.body -> body) and ensure scroll */
+    body {
         background-attachment: scroll;
     }
+
     @supports (-webkit-touch-callout: none) {
         body {
             background-attachment: scroll;
