@@ -33,11 +33,6 @@ html, body {
 }
 
 body {
-    background-color: black;
-    background: black url('../images/16_9_bg.webp') no-repeat center center;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
     color: var(--color-text);
     line-height: 1.5;
     display: flex;
@@ -468,16 +463,30 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black url('../images/16_9_bg.webp') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Place behind all content */
+}
+
+
+
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
     /* Base Layout Adjustments */
     body {
-        background: black url('../images/916_bg.webp') no-repeat center center;
-        background-size: cover;
-        background-position: center center;
-        background-attachment: scroll;
         text-align: center;
         padding:1rem;
+    }
+
+    .bg-container {
+        background: black url('../images/916_bg.webp') no-repeat center center;
+        background-size: cover;
     }
 
     /* Container Adjustments */
@@ -631,16 +640,6 @@ body {
 
 /* Additional Breakpoint for Extra Small Devices */
 @media screen and (max-width: 450px) {
-    /* Fix typo (.body -> body) and ensure scroll */
-    body {
-        background-attachment: scroll;
-    }
-
-    @supports (-webkit-touch-callout: none) {
-        body {
-            background-attachment: scroll;
-        }
-    }
 
     /* Further Text Size Reductions */
     .main-container h2 {
